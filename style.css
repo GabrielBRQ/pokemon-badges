@@ -23,6 +23,10 @@ body{
     color: green;
 }
 
+.weakness-table{
+    display: none;
+}
+
 .header{
     display: flex;
     align-items: center;
@@ -129,6 +133,77 @@ body{
     width: 20vh;
 }
 
+.weakness-table-active{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80vw;
+    height: 100vh;
+    background-color: red;
+    text-align: center;
+}
+
+.weakness-table-active p{
+    font-family: 'Roboto';
+    font-size: 5vh;
+}
+
+.pokedex-details{
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+    align-self: flex-start;
+    margin: 2vh 0 4vh 2vh;
+}
+
+.red,
+.yellow,
+.green{
+    height: 1.5vh;
+    width: 1.5vh;
+    border-radius: 100%;
+    border-style: none;
+}
+
+.red{
+    background-color: rgb(148, 41, 41);
+}
+
+.yellow{
+    background-color: rgb(213, 224, 51)
+}
+
+.green{
+    background-color: rgb(50, 148, 41)
+}
+.back-button{
+    font-family: 'Roboto';
+    height: 10vh;
+    width: 10vh;
+    color: white;
+    border-style: none;
+    border-radius: 100%;
+    border: 1vh #DEDEDE solid;;
+    padding: 1vh 2vh 1vh 2vh;
+    background: #2080BE;
+    background: -moz-linear-gradient(-45deg, #2080BE 0%, #144E75 100%);
+    background: -webkit-linear-gradient(-45deg, #2080BE 0%, #144E75 100%);
+    background: linear-gradient(135deg, #2080BE 0%, #144E75 100%);
+}
+
+.weakness-table-active img{
+    height: 70vh;
+    width: 60vw;
+    border: 1vh #DEDEDE solid;
+    border-top: 3vh #DEDEDE solid;
+    border-bottom: 3vh #DEDEDE solid;
+}
+
 .badge-img{
     filter: grayscale(100%);
     opacity: .3;
@@ -142,6 +217,14 @@ body{
     width: 10vw;
     margin-bottom: 2vh;
     color: red;
+}
+
+.weak{
+    background-color: rgba(240, 88, 88, 0.6);
+}
+
+.strong{
+    background-color: rgba(103, 194, 103, .6);
 }
 
 @media only screen and (max-width: 768px)  {
@@ -185,5 +268,24 @@ body{
         height: .4vh;
         background: #353030;
         margin: .8vh 0;
+    }
+
+    .weakness-table-active{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 80vh;
+        text-align: center;
+    }
+    
+    .weakness-table-active img{
+        height: 45vh;
+        width: 95vw;
+        border: 1vh #DEDEDE solid;
+        border-top: 3vh #DEDEDE solid;
+        border-bottom: 3vh #DEDEDE solid;
     }
 }

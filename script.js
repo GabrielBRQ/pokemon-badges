@@ -39,3 +39,35 @@ document.addEventListener('DOMContentLoaded', function() {
     image.addEventListener('click', removeFilter);
   });
 });
+
+
+// Função para adicionar a weak table
+const weakTableButton = document.querySelector('.weak-table');
+        
+// Selecione a div com a classe "weakness-table-active"
+const weaknessTable = document.querySelector('.weakness-table-active');
+   
+
+// Selecione a div com a classe "weakness-table-active"
+const content = document.querySelector('.content');
+
+// Selecione o botão de volta com a classe "back-button"
+const backButton = weaknessTable.querySelector('.back-button');
+
+
+// Adicione um evento de clique ao botão
+weakTableButton.addEventListener('click', () => {
+    // Altere a propriedade display da div weakness-table-active
+    weaknessTable.style.display = 'flex';
+
+    // Altere a propriedade display da div content
+    content.style.display = 'none';
+});
+
+backButton.addEventListener('click', () => {
+  // Altere a propriedade display da div "weakness-table-active" para "none"
+  weaknessTable.style.display = 'none';
+
+  // Altere a propriedade display da div content
+  content.style.display = 'grid';
+});
