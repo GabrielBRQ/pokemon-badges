@@ -19,6 +19,10 @@ body{
     font-family: 'Roboto';
 }
 
+.green-text {
+    color: green;
+}
+
 .header{
     display: flex;
     align-items: center;
@@ -51,7 +55,6 @@ body{
 
 
 .buttons{
-    padding-right: 1vw;
     display: flex;
     gap: 2vw;
     align-items: center;
@@ -59,10 +62,10 @@ body{
 
 
 .buttons button{
-    background-color: #5b9ef0;
+    background-color: #D4D0CF;
     width: 25vw;
     border-style: none;
-    color: white;
+    color: black;
     font-family: 'Roboto';
     border-radius: 5vh;
     padding: 1vh 2vh 1vh 2vh;
@@ -98,7 +101,11 @@ body{
 }
 
 .div-description{
+    display: flex;
+}
+.number{
     padding-bottom: 4vh;
+    font-weight: bold;
 }
 
 .badges-div{
@@ -123,9 +130,10 @@ body{
 }
 
 .badge-img{
-    height: 100%;
     filter: grayscale(100%);
     opacity: .3;
+    height: 20vh;
+    width: 20vh;
 }
 
 .city-name{
@@ -143,7 +151,7 @@ body{
 
     .buttons{
         flex-direction: column;
-        background-color: green;
+        background-color: #353030;
         position: absolute;
         top: 15vh;
         left: 0;
@@ -154,11 +162,22 @@ body{
 
     .buttons button{
         opacity: 0;
+        width: 45%;
+    }
+
+    .buttons.active{
+        height: auto;
+        padding: .4vh 0 .4vh 0;
+    }
+
+    .buttons.active button{
+        opacity: 1;
     }
 
     .hamburger{
         display: block;
         cursor: pointer;
+        padding-right: 1vw;
     }
     
     .hamburger .line{
