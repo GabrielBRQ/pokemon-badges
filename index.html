@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="initial-div">
+        <p class="welcome">WELCOME</p>
+        <div class="input-div">
+            <div class="name">Enter your name (maximum 12 characters):</div>
+            <input type="text" id="name" maxlength="12">
+        </div>
+        <button class="initial-button" onclick="saveName()">Enter</button>
+    </div>
     <div class="header">
         <div class="details">
             <img class="profile-icon" src="img/avatar.png" alt="Profile Icon">
             <div class="greetings">
                 <p class="little-text">Hi there,</p>
-                <p class="trainer-name">Berequetel</p>
+                <p class="trainer-name"></p>
             </div>
         </div>
         <div class="buttons">

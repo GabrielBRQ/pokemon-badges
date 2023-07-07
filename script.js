@@ -40,6 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Função para adicionar a initial div
+const initialDiv = document.querySelector('.initial-div');
+
+// Função para adicionar o header
+const header = document.querySelector('.header');
+
+function saveName(){
+  let name = document.querySelector("#name");
+  let trainerName = document.querySelector(".trainer-name");
+
+  trainerName.innerHTML = name.value;
+
+  initialDiv.style.display = 'none';
+  content.style.display = 'grid';
+  header.style.display = 'flex';
+}
 
 // Função para adicionar a weak table
 const weakTableButton = document.querySelector('.weak-table');
