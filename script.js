@@ -38,6 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     image.removeEventListener('click', removeFilter);
     image.addEventListener('click', removeFilter);
   });
+
+
+  var counterButtonPlus = document.querySelector('.counter-div .counter-button:first-of-type');
+  var counterButtonMinus = document.querySelector('.counter-div .counter-button:last-of-type');
+  var energyNumber = document.querySelector('.energy-number');
+
+  counterButtonPlus.addEventListener('click', function() {
+    var currentValue = parseInt(energyNumber.textContent);
+    if (currentValue > 0) {
+      energyNumber.textContent = currentValue - 1;
+    }
+  });
+
+  counterButtonMinus.addEventListener('click', function() {
+    var currentValue = parseInt(energyNumber.textContent);
+    energyNumber.textContent = currentValue + 1;
+  });
 });
 
 // Função para adicionar a initial div
