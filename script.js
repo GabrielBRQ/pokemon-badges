@@ -145,6 +145,8 @@ const profilePick = document.querySelector('.profile-pick');
 // Função que altera o estilo da div "profile-pick" para "display: flex"
 function showProfilePick() {
   profilePick.style.display = 'flex';
+  content.style.display = 'none';
+  header.style.display = 'none';
 }
 
 // Adiciona um ouvinte de eventos de clique à imagem com a classe "profile-icon"
